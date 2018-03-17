@@ -4,15 +4,13 @@ Responsive theme for [Pelican](http://blog.getpelican.com/) Static Site Generato
 
 ## Demo
 
-You can see the theme in action at https://parbhatpuri.com
+You can see the theme in action at https://cmolinaord.github.io
 
 ### Screenshots
 
 ![homepage-mobile](screenshot-mobile.png)
 
 ![homepage-web](screenshot-web.png)
-
-![article](screenshot-article.png)
 
 
 ## Features
@@ -32,7 +30,7 @@ You can install Pelican-Blue theme to your earlier Pelican project or create a n
 * Clone the repository
 
 ```
-$ git clone https://github.com/Parbhat/pelican-blue.git
+$ git clone https://github.com/cmolinaord/pelican-blue.git
 ```
 
 * Create a `THEME` variable in your `pelicanconf.py` file and set its value to the location of pelican-blue theme.
@@ -108,3 +106,7 @@ For more information on publishing your site, read the publishing [docs](http://
 ## Contributing
 
 Your contributions are welcome to improve the `pelican-blue` theme.
+
+## Thanks
+
+I would thank to [Parbhat](https://parbhatpuri.com) for the parent [pelican-blue theme](https://github.com/Parbhat/pelican-blue)
