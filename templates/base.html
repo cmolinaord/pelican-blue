@@ -75,6 +75,7 @@
     <nav class="nav">
         <ul class="list-bare">
 
+		<li><a class="nav__link" href="{{ SITEURL }}">Blog</a></li>
             {% for title, link in MENUITEMS %}
                 <li><a class="nav__link" href="{{ link }}">{{ title }}</a></li>
             {% endfor %}
@@ -82,9 +83,18 @@
             {% if DISPLAY_PAGES_ON_MENU and pages %}{% for p in pages %}
                 <li><a class="nav__link" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
             {% endfor %}{% endif %}
-
         </ul>
     </nav>
+
+    {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
+        <h2>Categories</h2>
+        <ul class="navbar">
+            {% for cat, null in categories %}
+                <li{% if cat == category %} class="active"{% endif %}><a
+                        href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
     <p class="social">
         {% if SOCIAL %}
@@ -103,18 +113,8 @@
         {% endif %}
     </p>
 
-    {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
-        <h2>Categories</h2>
-        <ul class="navbar">
-            {% for cat, null in categories %}
-                <li{% if cat == category %} class="active"{% endif %}><a
-                        href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-            {% endfor %}
-        </ul>
-    {% endif %}
-
     {% if LINKS %}
-        <h2 class="blog_roll_link"><br/>BLOGROLLS</h2>
+        <h2 class="blog_roll_link"><br/>Other links</h2>
         <ul class="navbar">
             {% for name, link in LINKS %}
                 <li><a href="{{ link }}">{{ name }}</a></li>
